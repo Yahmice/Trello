@@ -9,13 +9,12 @@ branches:
 cache: node_modules # кеширование
 
 install:
-  - npm ci # установка зависимостей из package-lock.json
-  # - npm install # установка зависимостей из package.json
+  yarn install --production=false
 
 build: off # отключение встроенной в appveyor системы сборки
 
 build_script:
-  - npm run build # сборка проекта
+  - yarn build # сборка проекта
 
 deploy_script: # скрипт развёртывания
   - git config --global credential.helper store
