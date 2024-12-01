@@ -1,6 +1,6 @@
 import './form.css';
 
-import Card from '../card/Card';
+import Card from '../card/card';
 
 export default class Form {
   constructor() {
