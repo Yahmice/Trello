@@ -1,7 +1,7 @@
-import Column from '../components/column/Column';
-import Container from '../components/container/Container';
-import DragController from '../libs/DragController';
-import Storage from '../libs/Storage';
+import Column from '../components/column/column.js';
+import Container from '../components/container/container.js';
+import DragController from '../libs/dragController.js';
+import Storage from '../libs/storage.js';
 
 export default class App {
   constructor() {
