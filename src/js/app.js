@@ -1,11 +1,33 @@
-// TODO: write code here
+import Column from '../components/column/Column';
+import Container from '../components/container/Container';
+import DragController from '../libs/DragController';
+import Storage from '../libs/Storage';
 
-// comment this to pass build
-const unusedVariable = "variable";
+export default class App {
+  constructor() {
+    this.wrapper = document.querySelector('.wrapper');
 
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
+    this.container = new Container();
+
+    this.columnTodo = new Column('todo', 'todo');
+    this.columnProgress = new Column('in progress', 'progress');
+    this.columnDone = new Column('done', 'done');
+
+    this.dragController = new DragController();
+    this.storage = new Storage();
+  }
+
+  init() {
+    this.render();
+  }
+
+  render() {
+    this.wrapper.append(this.container.element);
+
+    const data = this.storage.formData;
+
+    this.columnTodo.render('.container', data);
+    this.columnProgress.render('.container', data);
+    this.columnDone.render('.container', data);
+  }
 }
-
-console.log("app.js included");
