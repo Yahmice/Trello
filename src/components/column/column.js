@@ -1,7 +1,7 @@
 import './column.css';
 
-import Card from '../card/Card';
-import Form from '../form/Form';
+import Card from '../card/card';
+import Form from '../form/form';
 
 export default class Column {
   constructor(title, dataAttribute) {
